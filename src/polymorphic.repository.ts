@@ -168,6 +168,7 @@ export abstract class AbstractPolymorphicRepository<E> extends Repository<E> {
             where: {
               id: parent[entityIdColumn(options)],
             },
+            withDeleted: true,
           }
         : {
             where: {
