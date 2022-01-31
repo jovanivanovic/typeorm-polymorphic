@@ -174,6 +174,7 @@ export abstract class AbstractPolymorphicRepository<E> extends Repository<E> {
               [entityIdColumn(options)]: parent[PrimaryColumn(options)],
               [entityTypeColumn(options)]: entityType,
             },
+            withDeleted: true,
           },
     );
   }
